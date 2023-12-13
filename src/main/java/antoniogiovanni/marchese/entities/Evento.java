@@ -23,9 +23,9 @@ public class Evento {
     @Column(name = "num_max_partecipanti")
     private int numeroMassimoPartecipanti;
 
-    @OneToMany(mappedBy = "evento")
+    @OneToMany(mappedBy = "evento", cascade = CascadeType.REMOVE)
     private List<Partecipazione> listaPartecipazioni;
-    @OneToOne(mappedBy = "evento")
+    @OneToOne(mappedBy = "evento", cascade = CascadeType.REMOVE)
     private Location location;
 
     public Evento(){

@@ -36,9 +36,11 @@ public class Application {
         //ld.save(location);
 
         //trovo la persona con id 2
-        Persona personaFromDB = pd.findById(2);
-        Evento eventoFromDB = ed.findById(3);
-        Partecipazione partecipazione = new Partecipazione(personaFromDB,eventoFromDB,StatoPartecipazione.DA_CONFERMARE);
-        ppd.save(partecipazione);
+        //Persona personaFromDB = pd.findById(2);
+        //Evento eventoFromDB = ed.findById(3);
+        //Partecipazione partecipazione = new Partecipazione(personaFromDB,eventoFromDB,StatoPartecipazione.DA_CONFERMARE);
+        //ppd.save(partecipazione);
+
+        //ed.findByIdAndDelete(3);
     }
 }
