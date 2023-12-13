@@ -29,18 +29,20 @@ public class Application {
         //pd.save(persona);
         //creo un evento
         Evento evento = new Evento("TitoloEvento",LocalDate.now().plusWeeks(3),"descrizione evento",TipoEvento.PUBBLICO,50);
-        //ed.save(evento);
+
         //aggiungo la location
 
-        Location location = new Location("Location 1","Parigi",evento);
+        Location location = new Location("Location 1","Parigi");
+        evento.setLocation(location);
         //ld.save(location);
+        //ed.save(evento);
 
         //trovo la persona con id 2
-        //Persona personaFromDB = pd.findById(2);
-        //Evento eventoFromDB = ed.findById(3);
+        //Persona personaFromDB = pd.findById(7);
+        //Evento eventoFromDB = ed.findById(9);
         //Partecipazione partecipazione = new Partecipazione(personaFromDB,eventoFromDB,StatoPartecipazione.DA_CONFERMARE);
         //ppd.save(partecipazione);
 
-        //ed.findByIdAndDelete(3);
+        //ed.findByIdAndDelete(9);
     }
 }

@@ -25,7 +25,8 @@ public class Evento {
 
     @OneToMany(mappedBy = "evento", cascade = CascadeType.REMOVE)
     private List<Partecipazione> listaPartecipazioni;
-    @OneToOne(mappedBy = "evento", cascade = CascadeType.REMOVE)
+    @ManyToOne
+    @JoinColumn(name = "luogo_evento_id")
     private Location location;
 
     public Evento(){
@@ -78,6 +79,14 @@ public class Evento {
 
     public void setNumeroMassimoPartecipanti(int numeroMassimoPartecipanti) {
         this.numeroMassimoPartecipanti = numeroMassimoPartecipanti;
+    }
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
     }
 
     @Override

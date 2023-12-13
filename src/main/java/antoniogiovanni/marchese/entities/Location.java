@@ -10,14 +10,10 @@ public class Location {
     private String nome;
     private String citta;
 
-    @OneToOne
-    @JoinColumn(name = "evento_id", nullable = false, unique = true)
-    private Evento evento;
 
-    public Location(String nome, String citta, Evento evento) {
+    public Location(String nome, String citta) {
         this.nome = nome;
         this.citta = citta;
-        this.evento = evento;
     }
 
     public Location() {
@@ -41,14 +37,6 @@ public class Location {
 
     public void setCitta(String citta) {
         this.citta = citta;
-    }
-
-    public Evento getEvento() {
-        return evento;
-    }
-
-    public void setEvento(Evento evento) {
-        this.evento = evento;
     }
 
     @Override
